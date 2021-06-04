@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Contacto</title>
+    <script src="https://kit.fontawesome.com/a0769e5497.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" 
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <style>
+
+        h2{
+            margin-top: 20px;
+        }
+
+        footer {
+            background: #154949;
+            color: white;
+            padding: 60px;
+            width: 100%;
+            height: 200px;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+    
+        .left {
+            text-align: left;
+    
+        }
+    
+        .right {
+            text-align: right;
+    
+        }
+    
+        .footer-links {
+            list-style-type: none;
+        }
+    
+        .footer-links i {
+            color: white;
+    
+        }
+    
+        .footer-links>li {
+            display: inline-block;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="/Solemne1/Carrousel/clav-verde-icono.ico" width="40" height="40" class="d-inline-block align-top" alt="">
+            <a class="navbar-brand" href="#">ClavisteV</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-link active" href="#">Inicio <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#">Planes Hogar</a>
+                <a class="nav-link" href="#">Planes Móviles</a>
+                <a class="nav-link" href="#">Contacto</a>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <section>
+        <div class="container">
+            <h2>Formulario de Contacto</h2>
+
+            <form action="" id="formularioContacto">
+
+                <div class="row">
+                    <!-- Ingreso Nombre Completo-->
+                    <div class="col">
+                      <label for="txtNombre">Nombre Completo</label>
+                      <input type="text" class="form-control" name="txtNombre" placeholder="Ingrese Nombre Completo">
+                    </div>
+
+                    <!-- Ingreso Correo electrónico-->
+                    <div class="col">
+                      <label for="email">Correo electrónico</label>
+                      <input type="email" class="form-control" name="email" placeholder="Ingrese correo electrónico">
+                    </div>
+                </div> <br>
+
+                <!-- Selección Rut o Pasaporte-->
+                <label for="">Seleccione tipo de documento</label>
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="radioRut" name="tipoDocumento" class="custom-control-input" value="isRut">
+                    <label class="custom-control-label" for="radioRut">Rut</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="radioPasaporte" name="tipoDocumento" class="custom-control-input" value="isPasaporte">
+                    <label class="custom-control-label" for="radioPasaporte">Pasaporte</label>
+                </div> <br>
+
+                <div class="row">
+                    <!-- Ingreso Rut-->
+                    <div class="col">
+                      <label for="txtRut" id="lblrut">Ingrese Rut</label>
+                      <input type="text" class="form-control" id="rut" placeholder="Ingrese Rut">
+                    </div>
+
+                    <!-- Ingreso Pasaporte-->
+                    <div class="col">
+                      <label for="pasaporte">Pasaporte</label>
+                      <input type="text"  id="pasaporte" class="form-control" placeholder="Ingrese Pasaporte">
+                    </div>
+                </div> <br>
+
+                <div class="row">
+                    <!-- Ingreso Teléfono-->
+                    <div class="col">
+                      <label for="telefono">Ingrese Teléfono</label>
+                      <input type="tel" class="form-control" placeholder="Ingrese Teléfono">
+                    </div>
+
+                    <!-- Ingreso Correo electrónico-->
+                    <div class="col">
+                      <label for="ciudad">Ingrese Ciudad de Residencia</label>
+                      <input type="text" class="form-control" placeholder="Ingrese Ciudad">
+                    </div>
+                </div> <br>
+
+                <!-- Ingreso Comentario-->
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Ingrese Comentario</label>
+                    <textarea class="form-control" id="comentario" rows="5"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-info">Enviar</button>
+                <button type="button" class="btn btn-secondary">Limpiar</button>
+
+            </form>
+        </div>
+    </section>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="left col-9">
+                    <h6>CLAVISTEV</h6>
+                    <p class="text-justify">
+                        Sucursal Principal - Santiago Centro 394 <br>
+                        Linea Telefónica 600 200 8000 <br>
+                        © 2021 - Website Designed by MIA-SAF Ltda
+                    </p>
+                </div>
+    
+                <div class="right col-3">
+                    <h6>SÍGUENOS EN REDES SOCIALES</h6>
+                    <ul class="footer-links d-flex justify-content-between" id="logos-redes">
+                        <li><a href="https://www.facebook.com/ClavisteV-100393962191865" target="_blank"><i
+                                    class="fab fa-facebook""></i></a></li>
+                            <li><a href=" https://twitter.com/clavistev" target="_blank"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li><a href="https://www.instagram.com/clavistev/" target="_blank"><i
+                                    class="fab fa-instagram"></i></a></li>
+    
+                    </ul>
+                </div>
+    
+    
+    
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+    <script src="formulario.js"></script>
+</body>
+</html>
