@@ -8,6 +8,7 @@
     <script src="https://kit.fontawesome.com/a0769e5497.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" 
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/clima.css">
     <style>
 
         h2{
@@ -53,7 +54,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">
-                <img src="/Solemne1/Carrousel/clav-verde-icono.ico" width="40" height="40" class="d-inline-block align-top" alt="">
+                <img src="/img/clav-verde-icono.ico" width="40" height="40" class="d-inline-block align-top" alt="">
             <a class="navbar-brand" href="#">ClavisteV</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -65,6 +66,8 @@
                 <a class="nav-link" href="#">Planes Móviles</a>
                 <a class="nav-link" href="#">Contacto</a>
               </div>
+            </div>
+            <div class="container-fluid" id="clima">
             </div>
           </nav>
     </header>
@@ -106,7 +109,7 @@
                     <!-- Ingreso Rut-->
                     <div class="col">
                       <label for="txtRut" id="lblrut">Ingrese Rut</label>
-                      <input type="text" class="form-control" id="rut" placeholder="Ingrese Rut">
+                      <input type="text" class="form-control" id="rut" placeholder="Ingrese Rut" oninput="checkRut(this)">
                     </div>
 
                     <!-- Ingreso Pasaporte-->
@@ -158,7 +161,7 @@
                     <h6>SÍGUENOS EN REDES SOCIALES</h6>
                     <ul class="footer-links d-flex justify-content-between" id="logos-redes">
                         <li><a href="https://www.facebook.com/ClavisteV-100393962191865" target="_blank"><i
-                                    class="fab fa-facebook""></i></a></li>
+                                    class="fab fa-facebook"></i></a></li>
                             <li><a href=" https://twitter.com/clavistev" target="_blank"><i class="fab fa-twitter"></i></a>
                         </li>
                         <li><a href="https://www.instagram.com/clavistev/" target="_blank"><i
@@ -178,6 +181,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" 
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
-    <script src="/Solemne2/js/formulario.js"></script>
+    <script src="/js/formulario.js"></script>
+    <script src="/js/validarRut.js"></script>
+    <script src="/js/api.js"></script>
+
 </body>
 </html>
