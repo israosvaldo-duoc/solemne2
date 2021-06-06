@@ -33,7 +33,21 @@ $(document).ready(function(){
     
     $("#rut").prop("disabled", true)
     $("#pasaporte").prop("disabled", true)
+    // Validacion tipoDocumento
+    $("input[name=tipoDocumento]").click(function(){
+        if($('input:radio[name=tipoDocumento]:checked').val() == "isRut"){
+            $("#rut").prop("disabled", false) && $("#pasaporte").prop("disabled", true)
+        }
+        if($('input:radio[name=tipoDocumento]:checked').val() == "isPasaporte"){
+            $("#rut").prop("disabled", true) && $("#pasaporte").prop("disabled", false)
+        }
 
+    })
+
+
+    $("#btnLimpiar").click(function(event){
+        $("#formularioContacto")[0].reset();
+    })
     
 
     
