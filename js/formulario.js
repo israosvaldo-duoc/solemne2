@@ -14,6 +14,9 @@ $(document).ready(function(){
 
             comentario : {
                 minlength: 50,
+            },
+            rut:{
+                validRut: true
             }
 
         },
@@ -51,7 +54,7 @@ $(document).ready(function(){
         $("#formularioContacto")[0].reset();
     })
     
-
+    
     
     
 })
