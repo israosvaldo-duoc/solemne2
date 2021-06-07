@@ -15,8 +15,18 @@ $(document).ready(function () {
             comentario: {
                 minlength: 50,
             },
+            
             rut:{
-                validRut: true
+                validRut: true,
+                required: true,
+            },
+
+            tel: {
+                required: true,
+            },
+
+            txtPasaporte: {
+                required: true,
             }
 
         },
@@ -29,7 +39,19 @@ $(document).ready(function () {
                 required: "El campo email es requerido.*",
                 email: "El email ingresado debe tener un formato 'correo@example.com'"
             },
-            comentario: "El comentario debe tener al menos 50 caracteres"
+            comentario: "El comentario debe tener al menos 50 caracteres",
+
+            tel: {
+                required: "El campo teléfono es requerido"
+            },
+
+            rut: {
+                required: "El campo rut es requerido",
+            },
+
+            txtPasaporte: {
+                required: "El campo pasaporte es requerido",
+            }
         }
     })
 
