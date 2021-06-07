@@ -119,7 +119,7 @@
                     <!-- Ingreso Rut-->
                     <div class="col">
                       <label for="txtRut" id="lblrut">Ingrese Rut</label>
-                      <input name="rut" type="text" class="form-control" id="rut" placeholder="Ingrese Rut" oninput="checkRut(this)" onkeypress="return isNumber(event)">
+                      <input maxlength="12" name="rut" type="text" class="form-control" id="rut" placeholder="Ingrese Rut" oninput="checkRut(this)" onkeypress="return isNumber(event)">
                     </div>
 
                     <!-- Ingreso Pasaporte-->
@@ -131,9 +131,9 @@
 
                 <div class="row">
                     <!-- Ingreso Teléfono-->
-                    <div class="col">
+                    <div class="col" >
                       <label for="telefono">Teléfono</label>
-                      <input type="tel" class="form-control" placeholder="Ingrese Teléfono">
+                      <input type="tel" class="form-control" id="telefono" placeholder="Ingrese Teléfono">
                     </div>
 
                     <!-- Ingreso Correo electrónico-->
