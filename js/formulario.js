@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function () {
     console.log("jQuery Funcionando")
 
     $("#formularioContacto").validate({
@@ -12,7 +12,7 @@ $(document).ready(function(){
                 email: true,
             },
 
-            comentario : {
+            comentario: {
                 minlength: 50,
             }
 
@@ -36,22 +36,36 @@ $(document).ready(function(){
 
 
     // Validacion Tipo Documento (Rut/Pasaporte)
-    $("input[name=tipoDocumento]").click(function(){
-        if($('input:radio[name=tipoDocumento]:checked').val() == "isRut"){
+    $("input[name=tipoDocumento]").click(function () {
+        if ($('input:radio[name=tipoDocumento]:checked').val() == "isRut") {
             $("#rut").prop("disabled", false) && $("#pasaporte").prop("disabled", true)
         }
-        if($('input:radio[name=tipoDocumento]:checked').val() == "isPasaporte"){
+        if ($('input:radio[name=tipoDocumento]:checked').val() == "isPasaporte") {
             $("#rut").prop("disabled", true) && $("#pasaporte").prop("disabled", false)
         }
 
     })
 
+    // Validacion telefono
+    $("#telefono").keydown(function (event) {
+
+
+        if (event.keyCode != 46 && event.keyCode != 8 && event.keyCode != 37 && event.keyCode != 39)
+            if ($(this).val().length >= 10)
+                event.preventDefault();
+
+        // Solo Numeros del 0 a 9 
+        if (event.keyCode < 48 || event.keyCode > 57)
+            //Solo Teclado Numerico 0 a 9
+            if (event.keyCode < 96 || event.keyCode > 105)
+
+                if (event.keyCode != 46 && event.keyCode != 8 && event.keyCode != 37 && event.keyCode != 39)
+                    event.preventDefault();
+
+    })
+
     // Botón Limpiar campos
-    $("#btnLimpiar").click(function(event){
+    $("#btnLimpiar").click(function (event) {
         $("#formularioContacto")[0].reset();
     })
-    
-
-    
-    
 })
