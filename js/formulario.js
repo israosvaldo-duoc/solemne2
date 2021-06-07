@@ -30,10 +30,12 @@ $(document).ready(function(){
         }
     })
 
-    
+    // Desabilitar inputs (Rut y Pasaporte)
     $("#rut").prop("disabled", true)
     $("#pasaporte").prop("disabled", true)
-    // Validacion tipoDocumento
+
+
+    // Validacion Tipo Documento (Rut/Pasaporte)
     $("input[name=tipoDocumento]").click(function(){
         if($('input:radio[name=tipoDocumento]:checked').val() == "isRut"){
             $("#rut").prop("disabled", false) && $("#pasaporte").prop("disabled", true)
@@ -44,7 +46,7 @@ $(document).ready(function(){
 
     })
 
-
+    // Botón Limpiar campos
     $("#btnLimpiar").click(function(event){
         $("#formularioContacto")[0].reset();
     })
